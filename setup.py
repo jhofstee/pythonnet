@@ -139,6 +139,8 @@ class PythonNET_BuildExt(build_ext):
             "UCS%d" % unicode_width,
         ]
 
+        defines.append("PYTHON_WITHOUT_ENABLE_SHARED")
+
         if CONFIG == "Debug":
             defines.extend(["DEBUG", "TRACE"])
 
